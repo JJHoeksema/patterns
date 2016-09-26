@@ -1,4 +1,5 @@
+package main;
 
-public interface View {
+public interface Observer {
 	public void update(double ibmPrice, double aaplPrice, double googPrice);
 }

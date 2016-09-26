@@ -1,7 +1,9 @@
+package main;
+
 import java.util.ArrayList;
 
 //Uses the Subject interface to update all Observers
-public class StockGrabber implements Subject{
+public class StockGrabber implements Subject {
 	private ArrayList<Observer> observers;
 	private double ibmPrice;
 	private double aaplPrice;
@@ -18,10 +20,10 @@ public class StockGrabber implements Subject{
 	}
 
 	public void unregister(Observer deleteObserver) {
-		// TODO
+		observers.remove(deleteObserver);
 	}
 
-	public void notifyObserver() {
+	public void notifyObservers() {
 		// Cycle through all observers and notifies them of price changes
 		for(Observer observer : observers){
 			observer.update(ibmPrice, aaplPrice, googPrice);
@@ -31,16 +33,16 @@ public class StockGrabber implements Subject{
 	// Change prices for all stocks and notify observers of changes
 	public void setIBMPrice(double newIBMPrice){
 		this.ibmPrice = newIBMPrice;
-		notifyObserver();
+		notifyObservers();
 	}
 
 	public void setAAPLPrice(double newAAPLPrice){
 		this.aaplPrice = newAAPLPrice;
-		notifyObserver();
+		notifyObservers();
 	}
 
 	public void setGOOGPrice(double newGOOGPrice){
 		this.googPrice = newGOOGPrice;
-		notifyObserver();
+		notifyObservers();
 	}
 }

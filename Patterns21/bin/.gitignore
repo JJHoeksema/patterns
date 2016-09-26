@@ -1,9 +1,4 @@
-/GetTheStock.class
-/GraphView.class
-/IbmObserver.class
-/Observer.class
-/StockApp.class
-/StockGrabber.class
-/Subject.class
-/TextView.class
-/View.class
+/controller/
+/main/
+/model/
+/view/

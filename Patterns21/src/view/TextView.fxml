@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory ?>
+<?import javafx.scene.control.TableCell ?>
+<?import javafx.scene.control.TableColumn ?>
+<?import java.text.Format ?>
+
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TextViewController">
+   <children>
+      <TableView fx:id="aaplTable" prefHeight="600.0" prefWidth="260.0">
+        <columns>
+          <TableColumn fx:id="aaplColumn" prefWidth="75.0" text="AAPL">
+          <cellValueFactory>
+          	<PropertyValueFactory property="price" />
+          </cellValueFactory>
+      
+          </TableColumn>
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="ibmTable" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="260.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="ibmColumn" prefWidth="75.0" text="IBM">
+               <cellValueFactory>
+                  <PropertyValueFactory property="price" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <TableView fx:id="googTable" layoutX="215.0" layoutY="10.0" prefHeight="600.0" prefWidth="260.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="googColumn" prefWidth="75.0" text="GOOG">
+               <cellValueFactory>
+                  <PropertyValueFactory property="price" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+   </children>
+</HBox>
