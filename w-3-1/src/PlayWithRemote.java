@@ -42,15 +42,15 @@ public class PlayWithRemote{
         onPressed = new DeviceButton(cdCommand);
         onPressed.press();
 
-        TurnOn cdCommand = new TurnOn(CD);
+        VolumeDown cdCommand1 = new VolumeDown(CD);
         edev.push(CD);
-        history.push(cdCommand.info());
-        onPressed = new DeviceButton(cdCommand);
+        history.push(cdCommand1.info());
+        onPressed = new DeviceButton(cdCommand1);
         onPressed.press();
 
 
         while(!history.isEmpty()){
-            switch( history.peek()){
+            switch(history.pop()){
                 case "on" :
                     TurnOn onCommand1 = new TurnOn(edev.pop());
                     DeviceButton onPressed1 = new DeviceButton(onCommand1);
