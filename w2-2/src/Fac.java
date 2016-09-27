@@ -4,15 +4,22 @@
 public class Fac {
     public void doit() {
         System.out.println("Start");
-        Supermarkt object = factory();
+        Supermarkt object = factory("koren");
         System.out.println("Description: " + object.getDescription());
         System.out.println("Revenue: " + object.getRevenue());
         System.out.println("End");
     }
-    private Supermarkt factory(){
-        Supermarkt basicSupermarkt = new Korenbeurs( new Albertheijn(new PlainSupermarkt()));
-        System.out.println("Make supermarkt");
+    private Supermarkt factory(String arg){
+        switch(arg) {
+            case "koren":
+                System.out.println("Make supermarkt");
+                return new Korenbeurs(new Albertheijn(new PlainSupermarkt()));
+            case "over":
+                System.out.println("Make supermarkt");
+                return new Overwinningsplein(new Albertheijn(new PlainSupermarkt()));
+        }
 
-        return basicSupermarkt;
+
+        return null;
     }
 }
