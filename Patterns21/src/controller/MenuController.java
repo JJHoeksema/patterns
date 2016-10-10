@@ -11,7 +11,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import main.GrabStocks;
-import main.TextView;
 
 public class MenuController {
 	@FXML
@@ -23,10 +22,10 @@ public class MenuController {
 			   	FlowPane rootLayout = (FlowPane) menuBar.getScene().getRoot();
 			   	
 			   	FXMLLoader loader = new FXMLLoader();
-	            loader.setLocation(TextView.class.getResource("/view/TextView.fxml"));
+	            loader.setLocation(MenuController.class.getResource("/view/TextView.fxml"));
 	            HBox textLayout = (HBox) loader.load();
-	            GrabStocks.controller = loader.getController();;
-	            
+	            GrabStocks.controller = loader.getController();
+
 	            rootLayout.getChildren().clear();
 	            rootLayout.getChildren().add(textLayout);
 	        } catch (IOException e) {
@@ -40,7 +39,7 @@ public class MenuController {
 			FlowPane rootLayout = (FlowPane) menuBar.getScene().getRoot();
 			
 			FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(TextView.class.getResource("/view/ChartView.fxml"));
+            loader.setLocation(MenuController.class.getResource("/view/ChartView.fxml"));
             Pane chartLayout = (Pane) loader.load();
             GrabStocks.controller = loader.getController();;
             

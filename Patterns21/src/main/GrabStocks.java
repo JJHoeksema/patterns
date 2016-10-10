@@ -51,7 +51,7 @@ public class GrabStocks extends Application {
 			// setup chart view
 			try {
 	            loader = new FXMLLoader();
-	            loader.setLocation(TextView.class.getResource("/view/ChartView.fxml"));
+	            loader.setLocation(GrabStocks.class.getResource("/view/ChartView.fxml"));
 	            Pane chartLayout = (Pane) loader.load();
 	            controller = loader.getController();;
 	            rootLayout.getChildren().add(chartLayout);

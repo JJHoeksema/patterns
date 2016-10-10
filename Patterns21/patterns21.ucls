@@ -13,7 +13,7 @@
   </class>  
   <class id="2" language="java" name="controller.MenuController" project="Patterns21" 
     file="/Patterns21/src/controller/MenuController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="117" y="293"/>    
+    <position height="-1" width="-1" x="120" y="289"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -74,16 +74,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="main.TextView" project="Patterns21" file="/Patterns21/src/main/TextView.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="278" y="275"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="main.StockObserver" project="Patterns21" 
+  <class id="9" language="java" name="main.StockObserver" project="Patterns21" 
     file="/Patterns21/src/main/StockObserver.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="564" y="461"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -92,7 +83,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="main.GetTheStock" project="Patterns21" 
+  <class id="10" language="java" name="main.GetTheStock" project="Patterns21" 
     file="/Patterns21/src/main/GetTheStock.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1047" y="357"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -101,7 +92,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="model.Stock" project="Patterns21" file="/Patterns21/src/model/Stock.java" 
+  <class id="11" language="java" name="model.Stock" project="Patterns21" file="/Patterns21/src/model/Stock.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="858" y="-29"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -110,68 +101,92 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="13">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <association id="14">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="15" name="observers"/>      
-      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="17">    
+  <realization id="12">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="4"/>  
   </realization>  
-  <realization id="18">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="6"/>  
+  <realization id="13">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
   </realization>  
-  <association id="19">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="20" name="subject"/>      
-      <multiplicity id="21" minimum="0" maximum="1"/>    
+  <association id="14">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="15" name="ibmData">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="17">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="18" name="subject">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="20">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="21">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
   <association id="22">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="23" name="aaplData"/>      
-      <multiplicity id="24" minimum="0" maximum="2147483647"/>    
+      <attribute id="23" name="googData">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="24" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="25">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="26" name="controller"/>      
-      <multiplicity id="27" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="26" name="observers">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="27" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="28">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="29" name="ibmData"/>      
-      <multiplicity id="30" minimum="0" maximum="2147483647"/>    
+      <attribute id="29" name="aaplData">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="31">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <association id="32">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="33" name="googData"/>      
-      <multiplicity id="34" minimum="0" maximum="2147483647"/>    
+  <association id="31">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="32" name="controller">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
